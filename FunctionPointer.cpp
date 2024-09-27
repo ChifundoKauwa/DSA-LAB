@@ -1,0 +1,16 @@
+#include <iostream> 
+using namespace std; 
+int multiply(int a, int b)  
+{  
+return a * b;  
+} 
+int main() 
+{ 
+int (*func)(int, int); 
+func = multiply; 
+int prod = func(15, 2); 
+
+// func is pointing to the multiplyTwoValues function 
+cout << "The value of the product is: " << prod << endl; 
+return 0;
+}
